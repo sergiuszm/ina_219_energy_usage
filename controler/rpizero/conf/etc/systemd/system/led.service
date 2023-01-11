@@ -1,0 +1,15 @@
+[Unit]
+Description=Led Service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3.5 /home/pi/master-election-experiments/rpizero/led/led.py
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=piservice
+User=pi
+Group=pi
+Restart=on-abort
+
+[Install]
+WantedBy=basic.target

@@ -1,0 +1,5 @@
+pi-ina219
+RPi.GPIO
+smbus2
+pyRpc
+netifaces

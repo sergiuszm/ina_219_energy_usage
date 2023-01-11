@@ -1,0 +1,16 @@
+[Unit]
+Description=INA219 service
+After=lcd.service
+
+[Service]
+Type=simple
+ExecStart=/home/pi/master-election-experiments/rpizero/ina219/read.sh
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=piservice
+User=pi
+Group=pi
+Restart=on-failure
+
+[Install]
+WantedBy=basic.target

@@ -1,0 +1,16 @@
+[Unit]
+Description=Wifi check service
+After=lcd.service
+
+[Service]
+Type=simple
+ExecStart=/home/pi/master-election-experiments/rpizero/wifi/check.sh
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=piservice
+User=pi
+Group=pi
+Restart=on-failure
+
+[Install]
+WantedBy=basic.target
